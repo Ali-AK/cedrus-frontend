@@ -10,7 +10,7 @@ import { MoviesService } from '../services/movies.service';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: IResponse;
+  movies: any;
   constructor(private moviesService: MoviesService) { }
 
   ngOnInit(): void {
