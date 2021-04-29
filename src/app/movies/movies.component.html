@@ -6,6 +6,9 @@
     <th scope="col">Title</th>
     <th scope="col">Description</th>
     <th scope="col">Genre</th>
+    <th score="col">Rating</th>
+    <th scope="col">Delete</th>
+    <th scope="col">Rate</th>
   </tr>
   </thead>
   <tbody>
@@ -16,7 +19,10 @@
     </td>
     <td>{{ movie.description }}</td>
     <td>{{ movie.genre }}</td>
+    <ngb-rating [(rate)]="movie.rating"></ngb-rating>
+    <td><button class="btn-danger" (click)="deleteMovie(movie)">Delete</button></td>
+    <td><button class="btn-primary" (click)="rateMovie(movie)">Rate</button></td>
   </tr>
   </tbody>
 </table>
-<button (click)="print()">click</button>
+<!-- <button (click)="print()">click</button> -->
