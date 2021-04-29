@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
-import { IMovie } from '../models/IMovie';
-import { IResponse } from '../models/IResponse';
 import { MoviesService } from '../services/movies.service';
 
 @Component({
@@ -28,6 +26,7 @@ export class MoviesComponent implements OnInit {
 
   deleteMovie(movie): void {
     console.log(movie);
+    this.moviesService.deleteMovie(movie.id);
   }
 
   rateMovie(movie): void {
